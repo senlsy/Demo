@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Use the device default light theme to activate the StatusBar on API 11+ devices -->
+    <style name="AppTheme" parent="android:Theme.DeviceDefault.Light">
+        <item name="@attr/autoScaleTextViewStyle">@style/autoScaleTextView</item>
+    </style>
+
+   
+    
+
+</resources>

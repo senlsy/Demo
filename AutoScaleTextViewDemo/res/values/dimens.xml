@@ -1,0 +1,5 @@
+<!-- just used for the demo -->
+<resources>
+    <dimen name="width">100dp</dimen>
+    <dimen name="height">30dp</dimen>
+</resources>

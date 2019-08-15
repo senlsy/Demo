@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- attr跟style组合，可以在自定义view中使用指定view的defStyle=R.attr.autoScaleTextViewStyle，还要把attr的赋值放入app的Theme中去 -->
+    <attr name="autoScaleTextViewStyle" format="reference" />
+
+    <style name="autoScaleTextView">
+        <item name="@android:attr/background">@drawable/border</item>
+        <item name="@android:attr/padding">5dp</item>
+        <item name="@android:attr/gravity">center</item>
+        <item name="@attr/minTextSize">10dp</item>
+    </style>
+    <!-- ************************************************************************* -->
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/de.ankri"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Here is one of the AutoScaleTextViews. Use android:textSize to set the preferred textsize. -->
+
+    <TextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/cupcake"
+        android:textSize="16dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/cupcake"
+        android:textSize="16dp" 
+        style="@style/autoScaleTextView"/>
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/donut"
+        android:textSize="16dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/eclair"
+        android:textSize="16dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/froyo"
+        android:textSize="16dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/gingerbread"
+        android:textSize="16dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/honeycomb"
+        android:textSize="16dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/ics"
+        android:textSize="16dp" />
+
+    <!-- Demo how to alter the minimum text size. -->
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/ics"
+        android:textSize="16dp"
+        app:minTextSize="13dp" />
+
+    <de.ankri.views.AutoScaleTextView
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:text="@string/jellybean"
+        android:textSize="16dp" />
+
+</LinearLayout>

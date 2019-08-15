@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+
+        <!-- 指示器颜色 -->
+        <attr name="pstsIndicatorColor" format="color" />
+        <!-- 指示器的高度 -->
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <!-- 指示器下线的颜色 -->
+        <attr name="pstsUnderlineColor" format="color" />
+        <!-- 指示器下线的高度 -->
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <!-- tab分割线“|”的颜色 -->
+        <attr name="pstsDividerColor" format="color" />
+        <!-- tab分割线“|”的上下padding -->
+        <attr name="pstsDividerPadding" format="dimension" />
+        <!-- tab的左右padding -->
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <!-- 预留多少空间，显示前面的tab -->
+        <attr name="pstsScrollOffset" format="dimension" />
+        <!-- tab的背景颜色 -->
+        <attr name="pstsTabBackground" format="reference" />
+        <!-- tab采用的填充宽度 -->
+        <attr name="pstsShouldExpand" format="boolean" />
+        <!-- 是否将tab的文字转换成大写 -->
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <!-- 被选中tab的文字的颜色 -->
+        <attr name="tabSelectedColor" format="color" />
+        <!-- tab默认的文字的颜色 -->
+        <attr name="textColor" format="color" />
+        <!-- tab默认的文字的大小 -->
+        <attr name="tabTextSize" format="dimension" />
+        <!-- tab文字的风格，粗体，斜体 -->
+        <attr name="tabTextStyle" format="integer">
+            <enum name="NORMAL" value="0"></enum>
+            <enum name="BOLD" value="1"></enum>
+            <enum name="ITALIC" value="2"></enum>
+            <enum name="BOLD_ITALIC" value="3"></enum>
+        </attr>
+    </declare-styleable>
+
+</resources>

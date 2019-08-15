@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">AutoScalteTextViewSamples</string>
+    <string name="title_activity_auto_scale_text_view">Auto Scale TextView Demo</string>
+    <string name="cupcake">Cupcake</string>
+    <string name="donut">Donut</string>
+    <string name="eclair">Eclair</string>
+    <string name="froyo">Froyo</string>
+    <string name="gingerbread">Gingerbread</string>
+    <string name="honeycomb">Honeycomb</string>
+    <string name="ics">Ice Cream Sandwich</string>
+    <string name="jellybean">Jelly Bean</string>
+
+</resources>
