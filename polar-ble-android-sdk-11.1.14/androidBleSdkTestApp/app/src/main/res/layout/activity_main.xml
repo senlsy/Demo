@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="polar.com.androidblesdk.MainActivity">
+
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入您的设备号"
+        android:imeOptions="actionDone"
+        android:inputType="textCapCharacters|textPassword"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="14dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/broadcast_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="broadcast" />
+
+            <Button
+                android:id="@+id/connect_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="connect_toggle" />
+
+            <Button
+                android:id="@+id/ecg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ecg_stream" />
+
+            <Button
+                android:id="@+id/acc_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="acc_stream" />
+
+            <Button
+                android:id="@+id/ohr_ppg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ppg_stream" />
+
+            <Button
+                android:id="@+id/ohr_ppi_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ppi_stream" />
+
+            <Button
+                android:id="@+id/scan_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="scan devices" />
+
+            <Button
+                android:id="@+id/list_exercises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="list exercises" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>
