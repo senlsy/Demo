@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.wei.flowingflying.propermission"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <!-- 启动PrivActivity具备的权限 -->
+    <permission
+        android:name="wei.permission.STARTPRIVACTIVITY"
+        android:protectionLevel="normal" />
+
+    <!-- 定义访问PrivProvider的权限 -->
+    <permission
+        android:name="wei.permission.READ_CONTENTPROVIDER"
+        android:label="Allow read content provider"
+        android:protectionLevel="dangerous" />
+
+    <!-- 定义访问PrivProvider特定路径的权限 -->
+    <permission
+        android:name="wei.permission.READ_HELLO_CONTENTPROVIDER"
+        android:label="Allow read content provider path : hello"
+        android:protectionLevel="signature" />
+
+    <!-- 广播权限 -->
+    <permission
+        android:name="wei.permission.RECEIVER"
+        android:label="receiver need permission"
+        android:protectionLevel="signatureOrSystem" />
+
+    <uses-permission android:name="wei.permission.RECEIVER" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="cn.wei.flowingflying.propermission.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="PrivActivity"
+            android:label="@string/privActivity"
+            android:permission="wei.permission.STARTPRIVACTIVITY" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".PrivProvider"
+            android:authorities="cn.wei.flowingflying.propermission.PrivProvider"
+            android:exported="true"
+            android:readPermission="wei.permission.READ_CONTENTPROVIDER" >
+            <path-permission
+                android:pathPattern="/hello/.*"
+                android:readPermission="wei.permission.READ_HELLO_CONTENTPROVIDER" />
+
+            <grant-uri-permission android:pathPrefix="/hello" />
+        </provider>
+
+        <!--
+                               当需要权限传递时设置android:grantUriPermissions=true client将权限传递给grant，grant来访问 propermission
+        <provider
+            android:name=".PrivProvider"
+            android:authorities="cn.wei.flowingflying.propermission.PrivProvider"
+            android:exported="true"
+            android:grantUriPermissions="false"
+            android:readPermission="wei.permission.READ_CONTENTPROVIDER" >
+            <path-permission
+                android:pathPattern="/hello/.*"
+                android:readPermission="wei.permission.READ_HELLO_CONTENTPROVIDER" />
+        </provider>
+        -->
+        
+        <!-- receiver设置了权限，自己给自己发广播都可收到，别的应用程序则需要为Intent配置权限 -->
+        <receiver
+            android:name=".Receiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="wei.permission.RECEIVER" >
+            <intent-filter>
+                <action android:name="sen.receiver" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

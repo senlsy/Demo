@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ProPermission</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="privActivity">Custom Permission</string>
+    <string name="privProvider">Provider Privilege</string>
+    <string name="receiver_desc">Receiver need pismission</string>
+
+</resources>
