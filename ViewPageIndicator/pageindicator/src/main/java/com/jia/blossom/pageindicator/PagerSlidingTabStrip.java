@@ -322,10 +322,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView
         if(isInEditMode() || tabCount == 0) {
             return;
         }
+
         // 当前page对应的tab位置
         View currentTab=tabsContainer.getChildAt(currentPosition);
         float lineLeft=currentTab.getLeft();
         float lineRight=currentTab.getRight();
+
         // 下一个tab位置
         if(currentPositionOffset > 0f && currentPosition < tabCount - 1) {
             View nextTab=tabsContainer.getChildAt(currentPosition + 1);
@@ -334,10 +336,13 @@ public class PagerSlidingTabStrip extends HorizontalScrollView
             lineLeft=(currentPositionOffset * nextTabLeft + (1f - currentPositionOffset) * lineLeft);
             lineRight=(currentPositionOffset * nextTabRight + (1f - currentPositionOffset) * lineRight);
         }
+
         final int height=getHeight();
         rectPaint.setColor(indicatorColor);
         // 画指标
         canvas.drawRect(lineLeft, height - indicatorHeight, lineRight, height, rectPaint);
+
+
         // 画指标下面的线
         rectPaint.setColor(underlineColor);
         canvas.drawRect(0, height - underlineHeight, tabsContainer.getWidth(), height, rectPaint);
