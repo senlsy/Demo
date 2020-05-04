@@ -387,7 +387,7 @@ public class PtrFrameLayout extends ViewGroup {
                 if (mDisableWhenHorizontalMove &&
                         !mPreventForHorizontal &&
                         (Math.abs(offsetX) > mPagingTouchSlop && Math.abs(offsetX) > Math.abs(offsetY))
-                        ) {
+                ) {
 
                     //起点位置的判断，mPtrIndicator的mCurrentPos只有进入到时movePos()方法后的时候才会改变。
                     if (mPtrIndicator.isInStartPosition()) {
@@ -495,7 +495,7 @@ public class PtrFrameLayout extends ViewGroup {
         //（刚离开初始位置 && 上一个状态是初始化状态）或者 （超过刷新时位置 && 上一个状态是加载完成状态 && 允许再次下拉刷新）
         if ((mPtrIndicator.hasJustLeftStartPosition() && mStatus == PTR_STATUS_INIT) ||
                 (mPtrIndicator.goDownCrossFinishPosition() && mStatus == PTR_STATUS_COMPLETE && isEnabledNextPtrAtOnce())
-                ) {
+        ) {
             mStatus = PTR_STATUS_PREPARE;
             mPtrUIHandlerHolder.onUIRefreshPrepare(this);
             if (DEBUG) {
