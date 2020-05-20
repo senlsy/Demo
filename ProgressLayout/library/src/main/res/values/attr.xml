@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="ProgressLayout">
-        <attr name="progress_Layout" format="reference"></attr>
-        <attr name="error_Layout" format="reference"></attr>
-        <attr name="empty_Layout" format="reference"></attr>
-    </declare-styleable>
-</resources>
