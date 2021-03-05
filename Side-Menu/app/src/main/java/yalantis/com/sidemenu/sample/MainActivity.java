@@ -27,6 +27,7 @@ import yalantis.com.sidemenu.util.ViewAnimator;
 
 
 public class MainActivity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
+
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
@@ -34,15 +35,12 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ContentFragment contentFragment = ContentFragment.newInstance(R.drawable.content_music);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, contentFragment)
-                .commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         drawerLayout = findViewById(R.id.drawer_layout);
         drawerLayout.setScrimColor(Color.TRANSPARENT);
         linearLayout = findViewById(R.id.left_drawer);
@@ -147,7 +145,9 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceFragment(ScreenShotable screenShotable, int topPosition) {
+
         this.res = this.res == R.drawable.content_music ? R.drawable.content_films : R.drawable.content_music;
+
         View view = findViewById(R.id.content_frame);
         int finalRadius = Math.max(view.getWidth(), view.getHeight());
         Animator animator = ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
@@ -156,6 +156,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
 
         findViewById(R.id.content_overlay).setBackground(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
+
         ContentFragment contentFragment = ContentFragment.newInstance(this.res);
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         return contentFragment;

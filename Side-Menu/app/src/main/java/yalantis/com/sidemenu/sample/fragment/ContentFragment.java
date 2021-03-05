@@ -17,6 +17,7 @@ import yalantis.com.sidemenu.sample.R;
  * Created by Konstantin on 22.12.2014.
  */
 public class ContentFragment extends Fragment implements ScreenShotable {
+
     public static final String CLOSE = "Close";
     public static final String BUILDING = "Building";
     public static final String BOOK = "Book";
@@ -53,8 +54,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         mImageView = (ImageView) rootView.findViewById(R.id.image_content);
         mImageView.setClickable(true);
@@ -68,8 +68,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                Bitmap bitmap = Bitmap.createBitmap(containerView.getWidth(),
-                        containerView.getHeight(), Bitmap.Config.ARGB_8888);
+                Bitmap bitmap = Bitmap.createBitmap(containerView.getWidth(), containerView.getHeight(), Bitmap.Config.ARGB_8888);
                 Canvas canvas = new Canvas(bitmap);
                 containerView.draw(canvas);
                 ContentFragment.this.bitmap = bitmap;
